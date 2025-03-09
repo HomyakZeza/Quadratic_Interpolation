@@ -30,6 +30,7 @@ public class Quadratic_Interpolation {
     public static Double quadratic_Interpolation(double x1Initial, double deltaX, double epsilon1, double epsilon2){
         double x1 = x1Initial;
         double k = 0;
+
         int flag = 0;
         double x2 = x1 + deltaX;
         double x3;
