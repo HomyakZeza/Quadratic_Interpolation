@@ -1,9 +1,9 @@
 public class Golden_Ratio {
     public static double f(double x){
         if(x==0) throw new ArithmeticException("Деление на 0");
-        return (Math.exp(x))+(1.0/x);
+        return x*x - 2*x + (Math.exp(-x));
     }
-    public static void Golden_Ratio(AB gap, double l, int k){
+    public static void Golden(AB gap, double l, int k){
         double y0 = gap.getA()+((3-Math.sqrt(5))/2)*(gap.getB()-gap.getA());
         double z0 = gap.getA()+gap.getB()-y0;
         double deltaX;
@@ -46,10 +46,10 @@ public class Golden_Ratio {
     }
 
     public static void main(String[] args) {
-        AB gap = new AB(0.25, 0.85);
+        AB gap = new AB(1.05, 1.35);
         double l = 0.00000001;
         int k = 0;
 
-        Golden_Ratio(gap, l, k);
+        Golden(gap, l, k);
     }
 }

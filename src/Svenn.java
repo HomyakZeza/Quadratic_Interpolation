@@ -1,9 +1,9 @@
 public class Svenn {
     public static double f(double x){
         if(x==0) throw new ArithmeticException("Деление на 0");
-        return (Math.exp(x))+(1.0/x);
+        return x*x - 2*x + (Math.exp(-x));
     }
-    public static void Svenn_Algorithm(double x0, double t, int k, AB gap){
+    public static void Svenn(double x0, double t, int k, AB gap){
         double f1 = f(x0-t);
         double f2 = f(x0);
         double f3 = f(x0+t);
@@ -64,7 +64,7 @@ public class Svenn {
         int k = 1;
         AB gap = new AB(0, 0);
 
-        Svenn_Algorithm(x0, t, k, gap);
+        Svenn(x0, t, k, gap);
     }
 
 }
