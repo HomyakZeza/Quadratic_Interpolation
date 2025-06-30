@@ -1,7 +1,6 @@
 public class Quadratic_Interpolation {
 
     public static double f(double x){
-        if(x == 0) throw new ArithmeticException("Деление на 0");
         return x*x - 2*x + (Math.exp(-x));
     }
 

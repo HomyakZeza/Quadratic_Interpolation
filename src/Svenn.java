@@ -1,6 +1,5 @@
 public class Svenn {
     public static double f(double x){
-        if(x==0) throw new ArithmeticException("Деление на 0");
         return x*x - 2*x + (Math.exp(-x));
     }
     public static void Svenn(double x0, double t, int k, AB gap){
@@ -59,7 +58,7 @@ public class Svenn {
     }
 
     public static void main(String[] args) {
-        double x0 = 1;    // Начальная точка
+        double x0 = 0;    // Начальная точка
         double t = 0.05;       // Шаг
         int k = 1;
         AB gap = new AB(0, 0);
